@@ -1,0 +1,5 @@
+.txt
+- - - example.txt
+- - - file.txt
+- - - output.txt
+- - - text.txt

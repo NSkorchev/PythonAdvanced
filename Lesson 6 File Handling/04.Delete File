@@ -1,0 +1,11 @@
+import os
+
+root_dir = os.path.dirname(os.path.abspath(__file__))
+file_name = "my_first_file.txt"
+file_path = os.path.join(root_dir, file_name)
+
+if os.path.isfile(file_path):
+    os.remove(file_path)
+    print("File exist")
+else:
+    print("File does not exist")
