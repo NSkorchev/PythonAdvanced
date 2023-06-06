@@ -1,0 +1,10 @@
+# line = input().split("|")
+# sub_lists = []
+#
+# for string in line[::-1]:
+#     sub_lists.extend(string.split())
+#
+# print(*sub_lists)
+
+numbers = [string.split() for string in input().split("|")]
+print(*[' '.join(sub_list) for sub_list in numbers[::-1] if sub_list])

@@ -7,7 +7,7 @@ def find_player_position():
 def check_valid_index(row, col, player=False):
     global wins
 
-    if 0 <= row < row and 0 <= col < cols:
+    if 0 <= row < rows and 0 <= col < cols:
         return True
     if player:
         wins = True
@@ -20,13 +20,14 @@ def bunnies_positions():
         for col in range(cols):
             if matrix[row][col] == "B":
                 positions.append([row, col])
+
     return positions
 
 
 def bunnies_move(bunnies_pos):
     for row, col in bunnies_pos:
         for bunnies_move in directions.values():
-            new_row, new_col = row + bunnies_move[0], col +bunnies_move[1]
+            new_row, new_col = row + bunnies_move[0], col + bunnies_move[1]
 
             if check_valid_index(new_row, new_col):
                 matrix[new_row][new_col] = 'B'
